@@ -12,10 +12,6 @@ let package = Package(
             name: "SpotifyAPI",
             targets: ["SpotifyWebAPI"]
         ),
-        .library(
-            name: "_SpotifyAPITestUtilities",
-            targets: ["SpotifyAPITestUtilities"]
-        )
     ],
     dependencies: packageDependencies,
     targets: [
