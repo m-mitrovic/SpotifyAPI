@@ -46,6 +46,11 @@ var packageDependencies: [Package.Dependency] {
             from: "1.4.0"
         ),
         .package(
+            name: "swift-crypto",
+            url: "https://github.com/apple/swift-crypto.git",
+            from: "1.1.3"
+        ),
+        .package(
             name: "OpenCombine",
             url: "https://github.com/OpenCombine/OpenCombine.git",
             from: "0.12.0"
