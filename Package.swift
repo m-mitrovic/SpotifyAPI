@@ -26,35 +26,8 @@ let package = Package(
             ],
             exclude: ["README.md"]
         ),
-        .target(
-            name: "SpotifyExampleContent",
-            dependencies: ["SpotifyWebAPI"],
-            exclude: ["README.md"],
-            resources: [
-                .process("Resources")
-            ]
-        ),
-        .target(
-            name: "SpotifyAPITestUtilities",
-            dependencies: spotifyAPITestUtilitiesDependencies,
-            exclude: ["README.md"],
-            resources: [
-                .process("Resources")
-            ]
-        ),
         
         // MARK: Test Targets
-        
-        .testTarget(
-            name: "SpotifyAPIMainTests",
-            dependencies: [
-                "SpotifyWebAPI",
-                "SpotifyExampleContent",
-                "RegularExpressions",
-                "SpotifyAPITestUtilities"
-            ]
-        )
-        
     ]
 )
 
