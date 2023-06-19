@@ -1,4 +1,5 @@
 import Foundation
+import Crypto
 
 public extension String {
     
