@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "SpotifyAPI",
-            targets: ["SpotifyWebAPI", "SpotifyExampleContent"]
+            targets: ["SpotifyWebAPI"]
         ),
         .library(
             name: "_SpotifyAPITestUtilities",
@@ -24,7 +24,6 @@ let package = Package(
             dependencies: [
                 .product(name: "RegularExpressions", package: "RegularExpressions"),
                 .product(name: "Logging", package: "swift-log"),
-                .product(name: "Crypto", package: "swift-crypto"),
                 .product(name: "OpenCombine", package: "OpenCombine"),
                 .product(name: "OpenCombineDispatch", package: "OpenCombine"),
                 .product(name: "OpenCombineFoundation", package: "OpenCombine")
@@ -80,11 +79,6 @@ var packageDependencies: [Package.Dependency] {
             name: "OpenCombine",
             url: "https://github.com/OpenCombine/OpenCombine.git",
             from: "0.12.0"
-        ),
-        .package(
-            name: "swift-crypto",
-            url: "https://github.com/apple/swift-crypto.git",
-            from: "1.1.3"
         ),
         .package(
             url: "https://github.com/apple/swift-docc-plugin",
